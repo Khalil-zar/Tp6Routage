@@ -1,0 +1,10 @@
+<h1>Nos produits en informatique</h1>
+<div class="container">
+  <div class="row">
+    <ng-container *ngFor="let t of materiels" >
+      <div class="col-4 pt-4" *ngIf="t.quantite!=0 ">
+     <Kha-materiel [m]="t"></Kha-materiel> 
+     </div>   
+  </ng-container>
+  </div>
+</div>

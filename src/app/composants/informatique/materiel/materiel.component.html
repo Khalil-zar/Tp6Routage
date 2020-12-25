@@ -1,0 +1,20 @@
+<div class="card text-center">
+         <div class="card-header">
+            {{t.libelle|titlecase}} 
+         </div>
+         <div class="card-body">
+            <img style="width:150px;height:120px;" src="{{t.photo}}" >
+        <br>
+     <span *ngIf="t.hautGamme==true" class="badge badge-primary">
+    {{t.prix}} Dt <i class="fa fa-thumbs-up" aria-hidden="true"></i>
+     </span>
+     <span *ngIf="t.hautGamme!=true" class="badge badge-pill badge-dark">
+    {{t.prix}} Dt
+     </span>
+     <div class="card">
+         </div>
+         <div class="card-footer">
+             <button type="button" class="btn btn-primary" [routerLink]="['/informatique', t.id]">Détails</button>
+         </div>
+     </div>
+    </div>
